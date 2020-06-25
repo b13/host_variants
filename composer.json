@@ -1,0 +1,25 @@
+{
+  "name": "b13/host-variants",
+  "type": "typo3-cms-extension",
+  "description": "Extends the base variants condition with current host.",
+  "authors": [
+    {
+      "name": "Daniel Goerz",
+      "role": "Developer"
+    }
+  ],
+  "license": ["GPL-2.0-or-later"],
+  "require": {
+    "typo3/cms-core": "^9.5.17 || ^10.4.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "B13\\HostVariants\\": "Classes"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "host_variants"
+    }
+  }
+}
