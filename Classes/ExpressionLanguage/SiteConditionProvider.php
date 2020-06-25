@@ -22,8 +22,8 @@ class SiteConditionProvider extends AbstractProvider
             return;
         }
 
-        // We make the request available in conditions for site configs base variants
-        // to enable base URL switches depending on the request.
+        // We make the host available in conditions for site configs base variants
+        // to enable base URL switches depending on the domain.
         // e.g. host == 'www.host.tld'
         $this->expressionLanguageVariables = [
             'host' => GeneralUtility::getIndpEnv('HTTP_HOST'),
