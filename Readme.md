@@ -1,6 +1,6 @@
 # EXT: host_variants
 
-This extension allows to switch a domain in TYPO3s Site Configuration depending on the current Host.
+This extension allows to configure a base variant in TYPO3s Site Configuration depending on the current Host.
 
 ## Requirements
 
