@@ -20,12 +20,23 @@ This allows configuring multiple domains for the same root page.
 base: 'https://main-domain.tld/'
 baseVariants:
   -
-    base: 'https://the-project.local/'
-    condition: 'applicationContext == "Development"'
-  - base: 'https://another-domain.tld/'
+    base: 'https://another-domain.tld/'
     condition: 'host == "another-domain.tld"'
-  - base: 'http://%env(DYNAMIC_DOMAIN)%/'
+  -
+    base: 'http://%env(DYNAMIC_DOMAIN)%/'
     condition: 'host == "%env(DYNAMIC_DOMAIN)%"'
+```
+
+Conditions can also be combined:
+```yaml
+base: 'https://main-domain.tld/'
+baseVariants:
+  -
+    base: 'https://local1.local/'
+    condition: 'applicationContext == "Development" && host == "local1.local"'
+  -
+    base: 'https://local2.local/'
+    condition: 'applicationContext == "Development" && host == "local2.local"'
 ```
 
 ---
