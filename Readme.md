@@ -4,7 +4,7 @@ This extension allows to configure a base variant in TYPO3s Site Configuration d
 
 ## Requirements
 
-* TYPO3 9 LTS or 10 LTS
+* TYPO3 9 LTS, 10 LTS or 11.0
 
 ## Installation and Setup
 Install the extension via your preferred way. No further setup is required.
