@@ -10,7 +10,6 @@ namespace B13\HostVariants\ExpressionLanguage;
  * of the License, or any later version.
  */
 
-use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\ExpressionLanguage\AbstractProvider;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
@@ -18,10 +17,6 @@ class SiteConditionProvider extends AbstractProvider
 {
     public function __construct()
     {
-        if (Environment::isCli()) {
-            return;
-        }
-
         // We make the host available in conditions for site configs base variants
         // to enable base URL switches depending on the domain.
         // e.g. host == 'www.host.tld'
