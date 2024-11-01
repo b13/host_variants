@@ -25,7 +25,7 @@ of the secondary site as a sub path of the main domain instead.
 
 ## Requirements
 
-* TYPO3 9 LTS, 10 LTS, 11 LTS, 12 LTS, 13 LTS
+* TYPO3 v11 LTS, v12 LTS or v13 LTS
 
 ## Installation and Setup
 Install the extension via your preferred way. No further setup is required.
