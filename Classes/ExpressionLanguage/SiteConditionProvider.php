@@ -11,7 +11,7 @@ namespace B13\HostVariants\ExpressionLanguage;
  */
 
 use TYPO3\CMS\Core\ExpressionLanguage\AbstractProvider;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Http\NormalizedParams;
 
 class SiteConditionProvider extends AbstractProvider
 {
@@ -21,7 +21,7 @@ class SiteConditionProvider extends AbstractProvider
         // to enable base URL switches depending on the domain.
         // e.g. host == 'www.host.tld'
         $this->expressionLanguageVariables = [
-            'host' => GeneralUtility::getIndpEnv('HTTP_HOST'),
+            'host' => NormalizedParams::createFromServerParams($_SERVER)->getHttpHost(),
         ];
     }
 }
